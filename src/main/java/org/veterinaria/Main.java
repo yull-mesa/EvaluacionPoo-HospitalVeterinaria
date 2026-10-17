@@ -7,9 +7,27 @@ public class Main {
         Hospital hospital = new Hospital();
         Scanner scanner = new Scanner(System.in);
 
+        // Menú de guía visual al iniciar
+        System.out.println("==================================================");
+        System.out.println("   HOSPITAL VETERINARIO - SISTEMA DE CONSOLA      ");
+        System.out.println("==================================================");
+        System.out.println("Comandos disponibles:");
+        System.out.println("  1. ingresar perro <nombre> <peso> <edad> <raza> <si/no>");
+        System.out.println("  2. ingresar gato <nombre> <peso> <edad>");
+        System.out.println("  3. ingresar ave <nombre> <peso> <edad> <envergadura>");
+        System.out.println("  4. vacunar <nombre>");
+        System.out.println("  5. asignar <nombre>");
+        System.out.println("  6. medicar <nombre> <mg>");
+        System.out.println("  7. alta <nombre>");
+        System.out.println("  8. reporte");
+        System.out.println("  9. salir");
+        System.out.println("==================================================");
+        System.out.println("Escribe un comando y presiona Enter:\n");
+
         while (true) {
             if (!scanner.hasNextLine()) break;
             String linea = scanner.nextLine().trim();
+
             if (linea.equalsIgnoreCase("salir")) {
                 break;
             }
@@ -27,7 +45,7 @@ public class Main {
 
             if (comando.equals("ingresar")) {
                 if (partes.length < 2) {
-                    System.out.println("ERROR: comando desconocido.");
+                    System.out.println("Comando desconocido: ERROR: comando desconocido.");
                     continue;
                 }
                 String tipo = partes[1].toLowerCase();

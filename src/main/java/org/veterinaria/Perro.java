@@ -1,32 +1,31 @@
 package org.veterinaria;
-
-public class Perro extends Paciente{
+public class Perro extends Paciente {
     private String raza;
     private boolean vacunado;
 
-    public Perro(String nombre,double peso , int edad , String raza, boolean vacunado){
-        super(nombre, peso, edad, vacunado?"Ingresado":"Cuarentena",10.0);
-        this.raza=raza;
-        this.vacunado=vacunado;
+    public Perro(String nombre, double peso, int edad, String raza, boolean vacunado) {
+        super(nombre, peso, edad, vacunado ? "INGRESADO" : "CUARENTENA", 10.0);
+        this.raza = raza;
+        this.vacunado = vacunado;
     }
 
-    public  String getRaza(){
+    public String getRaza() {
         return raza;
     }
 
-    public boolean isVacunado(){
+    public boolean isVacunado() {
         return vacunado;
     }
 
-    public void setVacunado(boolean vacunado){
-        this.vacunado=vacunado;
-        if(vacunado && "Cuarentena".equals(getEstado())){
-            setEstado("Ingresado");
+    public void setVacunado(boolean vacunado) {
+        this.vacunado = vacunado;
+        if (vacunado && "CUARENTENA".equals(getEstado())) {
+            setEstado("INGRESADO");
         }
     }
 
     @Override
-    public  String getTipo(){
+    public String getTipo() {
         return "Perro";
     }
 }

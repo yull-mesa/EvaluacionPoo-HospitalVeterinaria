@@ -25,4 +25,3 @@ public class AveExotica extends Paciente {
         return "Ave";
     }
 }
-
