@@ -1,4 +1,9 @@
-# 🏥 Sistema de Gestión - Hospital Veterinario (Java)
+yo hice dentro de la carpeta java package org.veterinaria 7 archivos para separar responsabilidades y facilitar el mantenimiento del mismo, también tome como ejemplo las directrices de la guía pdf adjunta en el wpp como guía para crear las clases y la logica del mismo programa creando clases constructores herencias encapsulamiento y tambien se le añadió @override que se encarga de sobrescribir 
+también implemente un menú para que el usuario pueda saber como manejar la app
+*como lo hice*: lo hice basándome en la guias y en los permisos que dio para este examen como el uso de ia consciente human in the loop yo di los prompts correctos para tener un código base y se fue manipulando a mi criterio y necesidades del proyecto mismo
+
+# 🏥 Sistema de Gestión - Hospita
+Veterinario (Java)
 
 Proyecto de consola desarrollado en **Java (JDK 17+)** como evaluación práctica de **Programación Orientada a Objetos (POO)**. Este sistema gestiona pacientes (perros, gatos y aves exóticas), jaulas y reglas de negocio complejas utilizando exclusivamente **vectores de capacidad fija** y aplicando principios sólidos de arquitectura y encapsulamiento.
 
