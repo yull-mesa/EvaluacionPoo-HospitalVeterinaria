@@ -1,40 +1,40 @@
 package org.veterinaria;
 
 public class Jaula {
-    private  int numero;
-    private  char tamano;//s,m,l
-    private char zona;//A o B
-    private  Paciente ocupante; // Referencia o null
+    private int numero;
+    private char tamano; // S, M, L
+    private char zona;   // A o B
+    private Paciente ocupante; // referencia o null
 
-    public  Jaula(int numero , char tamano ,char zona){
+    public Jaula(int numero, char tamano, char zona) {
         this.numero = numero;
         this.tamano = Character.toUpperCase(tamano);
         this.zona = Character.toUpperCase(zona);
-        this.ocupante= null;
-
+        this.ocupante = null;
     }
 
-    public  int getNumero(){
-        return  numero;
+    public int getNumero() {
+        return numero;
     }
 
-    public char getTamano(){
+    public char getTamano() {
         return tamano;
     }
 
-    public char getZona(){
+    public char getZona() {
         return zona;
     }
 
-    public Paciente getOcupante(){
+    public Paciente getOcupante() {
         return ocupante;
     }
 
-    public  void setOcupante(){
-        this.ocupante=ocupante;
+    public void setOcupante(Paciente ocupante) {
+        this.ocupante = ocupante;
     }
 
-    public  boolean estadoLibre(){
+    public boolean estaLibre() {
         return ocupante == null;
     }
 }
+
