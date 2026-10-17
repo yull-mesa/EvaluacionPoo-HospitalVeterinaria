@@ -4,18 +4,17 @@ public abstract class Paciente {
     private String nombre;
     private double peso;
     private int edad;
-    private String estado; // ingresado, cuarentena, en tratamiento
+    private String estado; // INGRESADO, CUARENTENA, EN_TRATAMIENTO
     private double factorDosis;
     private double dosisAcumulada;
-    private Jaula jaulaAsignada; // Corregido: "Jaula" debe ir con mayúscula si la clase se llama así
+    private Jaula jaulaAsignada; // referencia o null
 
-    // Corregido: Se cambiaron los puntos y comas (;) por comas (,) en los parámetros
     public Paciente(String nombre, double peso, int edad, String estado, double factorDosis) {
         setNombre(nombre);
         setPeso(peso);
         setEdad(edad);
         this.estado = estado;
-        this.factorDosis = factorDosis; // Corregido: Java es sensible a mayúsculas (factorDosis, no FactorDosis)
+        this.factorDosis = factorDosis;
         this.dosisAcumulada = 0.0;
         this.jaulaAsignada = null;
     }
@@ -24,10 +23,9 @@ public abstract class Paciente {
         return nombre;
     }
 
-    // Corregido: Se agregó el parámetro "String nombre" que faltaba en el método
     public void setNombre(String nombre) {
         if (nombre != null && !nombre.trim().isEmpty()) {
-            this.nombre = nombre.trim(); // Corregido: Se limpió la asignación repetida
+            this.nombre = nombre.trim();
         }
     }
 
@@ -49,6 +47,14 @@ public abstract class Paciente {
         }
     }
 
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
     public double getFactorDosis() {
         return factorDosis;
     }
@@ -57,7 +63,10 @@ public abstract class Paciente {
         return dosisAcumulada;
     }
 
-    // Corregido: El tipo de retorno debe ser "Jaula" con mayúscula
+    public void sumarDosisAcumulada(double dosis) {
+        this.dosisAcumulada += dosis;
+    }
+
     public Jaula getJaulaAsignada() {
         return jaulaAsignada;
     }
